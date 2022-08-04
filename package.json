@@ -1,6 +1,6 @@
 {
-  "name": "slides",
   "private": true,
+  "name": "slides",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
