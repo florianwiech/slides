@@ -13,6 +13,7 @@ const config = {
       input: {
         index: join(PACKAGE_ROOT, "index.html"),
         template: join(PACKAGE_ROOT, "template/index.html"),
+        reduceFrontendComplexity: join(PACKAGE_ROOT, "reducing-frontend-complexity/index.html"),
       },
     },
   },
