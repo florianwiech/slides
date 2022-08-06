@@ -13,6 +13,7 @@ const config = {
       input: {
         index: join(PACKAGE_ROOT, "index.html"),
         template: join(PACKAGE_ROOT, "template/index.html"),
+        iacToolsInAws: join(PACKAGE_ROOT, "iac-tools-in-aws/index.html"),
       },
     },
   },
