@@ -10,7 +10,9 @@ const PACKAGE_ROOT = dirname(fileURLToPath(import.meta.url));
 const config = {
   build: {
     rollupOptions: {
-      input: {},
+      input: {
+        template: join(PACKAGE_ROOT, "template/index.html"),
+      },
     },
   },
 };
