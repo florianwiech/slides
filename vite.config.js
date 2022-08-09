@@ -11,6 +11,7 @@ const config = {
   build: {
     rollupOptions: {
       input: {
+        index: join(PACKAGE_ROOT, "index.html"),
         template: join(PACKAGE_ROOT, "template/index.html"),
       },
     },
