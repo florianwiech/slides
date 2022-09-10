@@ -1,5 +1,6 @@
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
+import injectHTML from "./vite-plugin-html-inject";
 
 const PACKAGE_ROOT = dirname(fileURLToPath(import.meta.url));
 
@@ -17,6 +18,7 @@ const config = {
       },
     },
   },
+  plugins: [injectHTML()],
 };
 
 export default config;
