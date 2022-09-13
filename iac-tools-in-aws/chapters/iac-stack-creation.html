@@ -1,0 +1,26 @@
+<section>
+  <h3>Stack Creation</h3>
+  <img src="./assets/iac-basics-stack-creation.jpeg" alt="infrastructure as code create stack workflow" />
+
+  <aside class="notes">
+    <ol>
+      <li>we have some kind of config file that describes the resources we want to create</li>
+      <li>we run the deploy command from the IaC tool to create a collection of resources known as a stack</li>
+      <li>
+        the tool interprets the config file and creates a dependency tree (this has to be deployed before that and hey
+        for this resource we need some info from another one)
+      </li>
+      <li>
+        The IaC tool can not find a reference for that stack name, so it will create everything from scratch. Here it
+        iterates over each resource and calls the corresponding AWS apis of each service to create the resource
+      </li>
+      <li>
+        If it succeeds, AWS returns some information about the resource (eg.: identifier arn). the IaC tools will store
+        the original config combines with the provided metadata in a state file
+      </li>
+      <li>
+        If it fails it will stop the deployment and exit with showing the error message returned from the aws service
+      </li>
+    </ol>
+  </aside>
+</section>

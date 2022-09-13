@@ -9,116 +9,65 @@
     <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
     <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/white.css" />
     <link rel="stylesheet" href="/node_modules/reveal.js/plugin/highlight/monokai.css" />
-  </head>
 
+    <style>
+      :root {
+        --r-heading-text-transform: none;
+      }
+
+      /* https://stackoverflow.com/a/56071966/7616982 */
+      html {
+        overscroll-behavior-x: none;
+      }
+      body {
+        overscroll-behavior-x: none;
+      }
+
+      .reveal pre code {
+        max-height: 530px;
+      }
+
+      section {
+        /*border: 1px solid black;*/
+      }
+    </style>
+  </head>
   <body>
     <div class="reveal">
       <div class="slides">
+        <load src="./chapters/00-title.html" />
+        <load src="./chapters/about-me.html" />
+        <load src="./chapters/agenda.html" />
         <section>
-          <h1>Infrastructure as Code (IaC) in AWS</h1>
-          <aside class="notes">
-            <p>
-              When I first started with IaC there was the question which tool should I start with? Also, why do these
-              many tools exist? Aren't they in general all the same? Shouldn't we keep the number of tooling as low as
-              possible?
-              <br />
-              In next couple of minutes I want to introduce a couple of tools and compare them together. It is true that
-              they all share the same foundation which classifies them as an Infrastructure as Code tools, and you can
-              use them to deploy resources in AWS. But when we dive into the details you'll see that they do quite
-              differ. And based on the workload or application you want to create, you can pick a tool that might give
-              you a hard time achieving it that another tool can do for you right out of the box.
-            </p>
-          </aside>
+          <load src="./chapters/iac-basics.html" />
+          <load src="./chapters/iac-stack-creation.html" />
+          <load src="./chapters/iac-stack-update.html" />
         </section>
         <section>
-          <h2>About me</h2>
-          <p>I'm Florian Wiech 👋</p>
-          <p>3 years @ codecentric AG</p>
-          <p>Topics of interest: JavaScript Ecosystem & Public Cloud Infrastructure</p>
-          <small>https://florian.page</small>
-          <br />
-          <small>https://github.com/florianwiech</small>
+          <load src="./chapters/cloudformation.html" />
+          <load src="./chapters/cloudformation-characteristics.html" />
+          <load src="./chapters/cloudformation-region-dependent.html" />
+          <load src="./chapters/cloudformation-template.html" />
+          <load src="./chapters/cloudformation-example.html" />
+          <load src="./chapters/cloudformation-custom-resources.html" />
+          <load src="./chapters/cloudformation-caveats.html" />
         </section>
         <section>
-          <h2>Agenda</h2>
-          <ul>
-            <li>IaC Basics</li>
-            <li>
-              IaC Tools
-              <ul>
-                <li>AWS CloudFormation</li>
-                <li>aws-cdk</li>
-                <li>Terraform</li>
-              </ul>
-            </li>
-            <li>Architecture discussions</li>
-          </ul>
-          <aside class="notes">
-            <p>
-              Lay some groundwork adn then come to my favourite part which are some architecture discussion. We will
-              look at some common resource types and how easy it is to create it with the various tools.
-            </p>
-          </aside>
+          <load src="./chapters/cdk.html" />
+          <load src="./chapters/cdk-characteristics.html" />
+          <load src="./chapters/cdk-concepts.html" />
+          <load src="./chapters/cdk-constructs.html" />
+          <load src="./chapters/cdk-stability.html" />
+          <load src="./chapters/cdk-caveats.html" />
         </section>
         <section>
-          <h2>IaC Basics</h2>
-          <aside class="notes">
-            <p>Who of you has already used IaC tools before?</p>
-            <p>Who of you has at least used on of the tools listed in my agenda?</p>
-          </aside>
+          <load src="./chapters/terraform.html" />
         </section>
         <section>
-          <h3>Stack creation</h3>
-          <img src="./assets/IaC-Basics-create-stack.png" alt="infrastructure as code create stack workflow" />
-
-          <aside class="notes">
-            <ol>
-              <li>we have some kind of config file that describes the resources we want to create</li>
-              <li>we run the deploy command from the IaC tool to create a collection of resources known as a stack</li>
-              <li>
-                the tool interprets the config file and creates a dependency tree (this has to be deployed before that
-                and hey for this resource we need some info from another one)
-              </li>
-              <li>
-                The IaC tool can not find a reference for that stack name, so it will create everything from scratch.
-                Here it iterates over each resource and calls the corresponding AWS apis of each service to create the
-                resource
-              </li>
-              <li>
-                If it succeeds, AWS returns some information about the resource (eg.: identifier arn). the IaC tools
-                will store the original config combines with the provided metadata in a state file
-              </li>
-              <li>
-                If it fails it will stop the deployment and exit with showing the error message returned from the aws
-                service
-              </li>
-            </ol>
-          </aside>
+          <load src="./chapters/architecture-discussions.html" />
         </section>
-        <section>
-          <h3>Stack update</h3>
-          <aside class="notes">
-            <ol>
-              <li>We adapt our config file - change resources</li>
-              <li>Running deploy again, the iac tool finds a corresponding stack</li>
-              <li>
-                It will calculate a diff to know what things should be changes. Based on the resource this means either
-                just update a property or completely recreate the resource
-              </li>
-              <li></li>
-            </ol>
-          </aside>
-        </section>
-        <section>
-          <img src="./assets/Arch_AWS-CloudFormation_64@5x.png" alt="AWS CloudFormation Logo" />
-          <h2>AWS CloudFormation</h2>
-        </section>
-        <section>
-          <h2>aws-cdk</h2>
-        </section>
-        <section>
-          <h2>Terraform</h2>
-        </section>
+        <load src="./chapters/conclusion.html" />
+        <load src="./chapters/thank-you.html" />
       </div>
     </div>
     <script type="module" src="./main.js"></script>

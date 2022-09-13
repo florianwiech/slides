@@ -11,5 +11,7 @@ deck.initialize({
   controls: false,
   progress: false,
   navigationMode: "linear",
+  slideNumber: true,
+  // showSlideNumber: "print",
   transition: "none",
 });
