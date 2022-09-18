@@ -1,0 +1,52 @@
+<section>
+  <h2>Coupling</h2>
+</section>
+<section>
+  <h2>Coupling</h2>
+  <img src="./assets/architecture-discussion-coupling.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>Example: Serverless backend</li>
+      <li>viele kleine ressourcen</li>
+      <li>viele abhängigkeiten</li>
+      <li>code & infra eng beieinander</li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <h2>Coupling</h2>
+  <img src="./assets/architecture-discussion-coupling-cloudformation.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>brauche wieder tooling drum rum, dass für mich bundled, zipped und dann cloudformation antriggerd</li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <h2>Coupling</h2>
+  <img src="./assets/architecture-discussion-coupling-cloud-development-kit.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>bringt alles schon für mich mit.</li>
+      <li>deployen code & infra gemeinsam</li>
+      <li>
+        da alles sehr stark zusammenhängt ist es total super bereits alles beisammen zu haben. eine pipeline, die infra
+        & code direkt gemeinsam ausrollt
+      </li>
+      <li>nachteile fallen nicht so ins gewicht, sind daily business</li>
+      <li>sowas von eine lösung</li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <h2>Coupling</h2>
+  <img src="./assets/architecture-discussion-coupling-terraform.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>am besten code und infra getrennt deployen</li>
+      <li>bedeutet man deployed erst die infra und dann den jeweiligen code selber</li>
+      <li>bei vielen lambdas können es doch mehr pipelines werden als man gerne hätte</li>
+      <li>ist aufwendig, kostet zeit</li>
+    </ul>
+  </aside>
+</section>

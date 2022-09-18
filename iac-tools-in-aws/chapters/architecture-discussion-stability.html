@@ -1,0 +1,51 @@
+<section>
+  <h2>Stability</h2>
+</section>
+<section>
+  <h2>Stability</h2>
+  <img src="./assets/architecture-discussion-stability.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>Example: IAM setup</li>
+      <li>statische ressourcen</li>
+      <li>wenig referenzen/abhängigkeiten</li>
+      <li>werden einmal aufgebaut und ändern sich später nicht wirklich</li>
+      <li>lange templates</li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <h2>Stability</h2>
+  <img src="./assets/architecture-discussion-stability-cloudformation.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>small stack, can be deployed independently</li>
+      <li>sure IAM policies can be lengthy</li>
+      <li>even those long template are manageable since not that many references</li>
+      <li>api stability aim for long time</li>
+      <li>but overall look fine as a solution 👍</li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <h2>Stability</h2>
+  <img src="./assets/architecture-discussion-stability-cloud-development-kit.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>haben wenig bis keine referenzen</li>
+      <li>lange templates die wir nicht wirklich abstrahieren können (bleiben also bestehen)</li>
+      <li>ziehen und jedoch eine weitere Abstraktionsschicht rein -> mit node ecosystem das maintenance heavy ist</li>
+      <li>können daher hier die power con cdk nicht richtig ausleben 😕 -> nachteile überwiegen eher den vorteilen</li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <h2>Stability</h2>
+  <img src="./assets/architecture-discussion-stability-terraform.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>ähnlich wie CFN</li>
+      <li>auch seems as an appropriate fit 👍</li>
+    </ul>
+  </aside>
+</section>

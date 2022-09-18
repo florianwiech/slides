@@ -1,0 +1,57 @@
+<section>
+  <h2>Connectivity</h2>
+</section>
+<section>
+  <h2>Connectivity</h2>
+  <img src="./assets/architecture-discussion-connectivity.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>Example: DNS network setup</li>
+      <li>cross-account dependencies through zone-delegation</li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <h2>Connectivity</h2>
+  <img src="./assets/architecture-discussion-connectivity-cloudformation.jpeg" />
+</section>
+<section>
+  <h2>Connectivity</h2>
+  <img src="./assets/architecture-discussion-connectivity-cloudformation-custom-resource.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>custom resource super um edge azufangen</li>
+      <li>
+        wenn jedoch cross-access so zentral im stack aufgehanden ist, wird es eher zur qual. man gewinnt nicht mehr viel
+        vom IaC tool, wenn man doch alles selber programmieren muss
+      </li>
+      <li>
+        echt schwierig, weil neben deploy role auch noch lambda role mit berechtigungen vorhanden sein muss (die dann
+        auch ausreichend bgesichert ist)
+      </li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <h2>Connectivity</h2>
+  <img src="./assets/architecture-discussion-connectivity-cloud-development-kit.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>zwar einfacher dank bereits eingebauter abstraktion</li>
+      <li>
+        noch schwieriger im bereich IAM, da vieles unter der haube passiert, was man nicht sieht, jedoch dennoch in IAM
+        gießen muss
+      </li>
+    </ul>
+  </aside>
+</section>
+<section>
+  <h2>Connectivity</h2>
+  <img src="./assets/architecture-discussion-connectivity-terraform.jpeg" />
+  <aside class="notes">
+    <ul>
+      <li>providers to the rescue!</li>
+      <li>just perfect. connections can be handled within the stack</li>
+    </ul>
+  </aside>
+</section>

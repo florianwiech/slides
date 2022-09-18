@@ -1,25 +1,16 @@
 <section>
   <h2>No CloudFormation API available? 🤔</h2>
   <aside class="notes">
-    <p>What if my use-case is not supported with the current provided APIs?</p>
+    <p>What if there is no AWS API for my use-case</p>
   </aside>
 </section>
 <section>
   <h2>Solution: Custom Resources</h2>
   <aside class="notes">
-    <h3>EN</h3>
     <ul>
-      <li>AWS bereitgestellter Dienst</li>
-      <li>only pay for resources you deployed</li>
-      <li>stable maturity</li>
-      <li>Often directly supported with new feature releases</li>
-    </ul>
-    <h3>DE</h3>
-    <ul>
-      <li>AWS bereitgestellter Dienst</li>
-      <li>in der Grundform keine anfallenden Kosten. die erstelle Infra kostet jedoch</li>
-      <li>stabilen Reifegrad</li>
-      <li>Neue AWS features bringen oft schon direkt eine CloudFormation Integration mit sich</li>
+      <li>hook in a lambda -> everything possible</li>
+      <li>loose resource tracking</li>
+      <li>recreate features that Cloudformation actually provides</li>
     </ul>
   </aside>
 </section>
