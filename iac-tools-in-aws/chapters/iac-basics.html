@@ -1,0 +1,58 @@
+<section>
+  <h2>Infrastructure as Code (IaC)</h2>
+</section>
+<section>
+  <h2>Template anatomy</h2>
+  <pre><code data-trim data-noescape data-line-numbers>
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Description: String Description
+
+Mappings:
+  # matches a key to a corresponding set of named values
+
+Resources:
+  # set of resources
+
+Outputs:
+  # pass export values to different stacks
+  </code></pre>
+</section>
+
+<section>
+  <h2>Resource Example</h2>
+  <pre><code data-trim data-noescape data-line-numbers>
+---
+AWSTemplateFormatVersion: "2010-09-09"
+
+Mappings:
+  ImageMap:
+    HVM64: ami-01aab85a5e4a5a0fe
+    # ...
+
+Resources:
+  EC2Instance:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      ImageId: !FindInMap [ImageMap, HVM64]
+      InstanceType: t2.micro
+
+Outputs:
+   InstanceID:
+    Description: The Instance ID
+    Value: !Ref EC2Instance
+  </code></pre>
+</section>
+<section>
+  <!--  <picture>-->
+  <!--    <img src="./assets/shaun-the-sheep-thumbsup.png" alt="This does not scale" />-->
+  <!--    <source srcset="https://media.giphy.com/media/tIeCLkB8geYtW/giphy.gif" type="image/gif" />-->
+  <!--  </picture>-->
+  <picture>
+    <img src="./assets/minions-thumbsup.png" />
+    <source srcset="https://media.giphy.com/media/kigfYxdEa5s1ziA2h1/giphy.gif" type="image/gif" />
+  </picture>
+</section>
+<section>
+  <h2>Is one tool enough? 🤔</h2>
+</section>
